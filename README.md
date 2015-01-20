@@ -30,4 +30,4 @@ Author
 License
 =======
 
-MiniGrid is available under the MIT license. See the [LICENSE](LICENSE) file for more information.  
+Square-Grid is available under the MIT license. See the [LICENSE](LICENSE) file for more information.  

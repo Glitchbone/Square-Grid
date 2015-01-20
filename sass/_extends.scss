@@ -1,0 +1,29 @@
+/* Base grid properties */
+
+%grid {
+    
+    overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	padding: $gutter-half;
+    
+}
+
+/* Base cell properties */
+
+%cell {
+
+    position: relative;
+    float: left;
+    overflow: hidden;
+
+}
+
+%cell-content {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: $gutter-half;
+    
+}

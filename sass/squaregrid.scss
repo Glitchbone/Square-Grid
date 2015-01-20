@@ -1,0 +1,33 @@
+/* Square-Grid 0.9.0 - Copyright 2014 Adrien Glitchbone - MIT License */
+
+@import "compass/reset/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/float";
+
+$grid-cells-xs: 2 !default;
+$grid-cells-sm: 3 !default;
+$grid-cells-md: 4 !default;
+$grid-cells-lg: 5 !default;
+
+$grid-cell-ratio: 1 !default;
+
+$gutter-width: 16px !default;
+$gutter-half: $gutter-width / 2;
+$gutter-double: $gutter-width * 2;
+
+$screen-sm: 480px !default;
+$screen-md: 940px !default;
+$screen-lg: 1140px !default;
+
+$grid-class: '.grid' !default;
+$cell-class: '.cell' !default;
+$cell-content-class: '.cell-content' !default;
+
+$screen-sm-min: $screen-sm + $gutter-double;
+$screen-md-min: $screen-md + $gutter-double;
+$screen-lg-min: $screen-lg + $gutter-double;
+
+@import "extends";
+@import "mixins";
+@import "grid";

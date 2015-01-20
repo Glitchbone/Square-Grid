@@ -1,0 +1,63 @@
+#{$grid-class},
+#{$grid-class}::after,
+#{$grid-class}::before,
+#{$grid-class}--fluid,
+#{$grid-class}--fluid::after,
+#{$grid-class}--fluid::before,
+#{$cell-class},
+#{$cell-class}::after,
+#{$cell-class}::before,
+#{$cell-content-class},
+#{$cell-content-class}::after,
+#{$cell-content-class}::before {
+    @include box-sizing(border-box);
+}
+
+#{$grid-class} {
+
+    @extend %grid;
+    
+    max-width: $screen-lg-min;
+    
+	@media only screen and (max-width: $screen-lg-min - 1) {
+		max-width: $screen-md-min;
+	}
+	
+	@media only screen and (max-width: $screen-md-min - 1) {
+		max-width: $screen-sm-min;
+	}
+    
+}
+
+#{$grid-class}--fluid {
+
+    @extend %grid;
+    
+}
+
+#{$cell-class} {
+
+    @extend %cell;
+    
+    @include calc-grid-cell-width($grid-cells-lg);
+    
+    @include breakpoint(xs) {
+        @include calc-grid-cell-width($grid-cells-xs);
+    }
+
+    @include breakpoint(sm) {
+        @include calc-grid-cell-width($grid-cells-sm);
+    }
+
+    @include breakpoint(md) {
+        @include calc-grid-cell-width($grid-cells-md);
+    }
+    
+}
+
+#{$cell-content-class} {
+
+    @extend %cell-content;
+    
+}
+

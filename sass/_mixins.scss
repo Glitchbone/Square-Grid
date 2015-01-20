@@ -1,0 +1,24 @@
+@mixin calc-grid-cell-width($cols) {
+    
+    $width: percentage((100 / $cols) / 100);
+    
+    width: $width;
+    padding-bottom: $width * $grid-cell-ratio;
+    
+}
+
+@mixin breakpoint($size) {
+    
+    @if ($size == xs) {
+        @media only screen and (max-width: $screen-sm-min - 1) { @content; }
+    }
+    
+    @if ($size == sm) {
+        @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) { @content; }
+    }
+    
+    @if ($size == md) {
+        @media only screen and (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) { @content; }
+    }
+    
+}
